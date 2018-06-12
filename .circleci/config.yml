@@ -24,8 +24,6 @@ jobs:
     steps:
       - checkout
 
-      - run: "export APPLITOOLS_BATCH_ID=`echo $CIRCLE_SHA1`
-
       # Download and cache dependencies
       - restore_cache:
           keys:
@@ -34,6 +32,7 @@ jobs:
           - v1-dependencies-
 
       - run: gradle dependencies
+             "export APPLITOOLS_BATCH_ID=`echo $CIRCLE_SHA1`
 
       - save_cache:
           paths:
