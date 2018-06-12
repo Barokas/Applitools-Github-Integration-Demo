@@ -32,7 +32,7 @@ jobs:
           - v1-dependencies-
 
       - run: gradle dependencies
-             "export APPLITOOLS_BATCH_ID=`echo $CIRCLE_SHA1`"
+
 
       - save_cache:
           paths:
@@ -40,7 +40,7 @@ jobs:
           key: v1-dependencies-{{ checksum "build.gradle" }}
 
       # run tests!
-      - run: gradle test
+      - run: APPLITOOLS_BATCH_ID=$CIRCLE_SHA1 gradle test
 
 
 
