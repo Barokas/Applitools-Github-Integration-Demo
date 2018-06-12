@@ -36,6 +36,12 @@ public class HelloWorld {
             // Visual checkpoint #2.
             eyes.checkWindow("Click!");
 
+            // Click the "Diff1" button.
+            driver.findElement(By.cssSelector("body > div.demo-page.center > div:nth-child(2) > p:nth-child(2) > a")).click();
+
+            // Visual checkpoint #2.
+            eyes.checkWindow("Diff 1");
+
             // End the test.
             eyes.close();
 
