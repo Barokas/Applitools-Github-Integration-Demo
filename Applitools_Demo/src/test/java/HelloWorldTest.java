@@ -40,7 +40,7 @@ public class HelloWorldTest {
             driver.findElement(By.tagName("button")).click();
 
             // Visual checkpoint #2.
-            eyes.checkWindow("Click!");
+            eyes.checkWindow("Click!_2");
 
             // End the test.
             eyes.close();
